@@ -1,4 +1,5 @@
 require_relative 'config/environment'
+require_relative 'models/text_analyzer.rb'
 
 class App < Sinatra::Base
 
@@ -8,7 +9,7 @@ class App < Sinatra::Base
   end
 
 
-  post '/piglatinize' do
+  post '/' do
 
     @piglatin = PigLatinizer.new (params[:user_phrase])
 
